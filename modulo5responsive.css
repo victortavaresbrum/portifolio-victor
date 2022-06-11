@@ -1,0 +1,128 @@
+@media (max-width: 1000px){
+    main .container-main div{
+        margin:auto;
+    }
+    main .container-main img{
+        display:none;
+    } 
+    h2 {
+        margin-left: 50px;
+    }
+
+    div h3 {
+        margin-left: 50px;
+    }
+    form {
+        display:flex;
+        align-items: center;
+        width: 100%;
+        padding-top:30px;
+        text-align: center;
+        flex-direction: column; /*Essa porra organiza tudo na vertical*/
+    }
+    input {
+        margin:12px;
+    }
+}
+
+@media (min-height: 631px) {
+    .container-menu{
+        display: none;
+    }
+}
+@media (max-width: 1000){
+    .container{
+        padding: 0 20px;
+    }
+}
+@media (max-width: 630px) { /*Aqui o menu nav some para o mobile*/
+    nav {
+        display:none;
+    }
+    main.container-menu img {
+        display:none;
+    }
+    .container-menu{  /*Aqui alinhou tudo para fazer o menu hamburguer*/
+        height: 100%;  
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+    
+    #checkbox-menu{
+        position: absolute;
+        opacity: 0;
+    }
+    label {
+        cursor: pointer;  /*Aqui foi definido o quadradinho que o menu vai ficar*/ 
+        position: relative;
+        display: block;
+        height: 22px;
+        width:30px;
+    }
+    label span {            /*Aqui está sendo definido os traços do hamburguer*/ 
+        position: absolute;
+        display:block;
+        height: 5px;
+        width: 100%;
+        background: white;
+        border-radius: 30px;
+        transition: 0.25s ease-in-out;
+    }
+
+    label span:nth-child(1){  /*Altura de cada uma*/
+        top:0;
+    }
+    label span:nth-child(2){
+        top:8px;
+    }
+    label span:nth-child(3){
+        top:16px;
+    }
+
+    #checkbox-menu:checked + label span:nth-child(1){ /*Animação*/
+        transform:rotate(-45deg);
+        top:8px;
+    }
+
+    #checkbox-menu:checked + label span:nth-child(2){
+        opacity: 0;
+    }
+    #checkbox-menu:checked + label span:nth-child(3){
+        transform:rotate(45deg);
+        top:8px;
+    }
+    .container-desafio{
+        display:block;
+        padding-bottom: 0;
+    }
+    .contato{
+        padding:0;
+        margin:0;
+    }
+    div.nome-contato input{
+        margin: 0
+    }
+    div.sexo-contato{
+        padding-top:20px;
+        padding-bottom:0;
+    }
+    div.cidade-contato input{
+    height: 45px;
+    }
+
+    div.cidade-contato input{
+    margin: 0;
+    height: 45px;   
+    }
+    div.pergunta-contato{
+        padding-top: 22px; 
+        justify-content: center ; 
+    }
+
+    .contato .botao-contato{
+    }
+
+
+}
